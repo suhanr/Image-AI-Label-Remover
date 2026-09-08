@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanFrame — AI label cleaner</title>
+    <meta name="description" content="Remove embedded image metadata without re-encoding or reducing image quality." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav">
+        <a class="brand" href="#" aria-label="CleanFrame home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>clean<span>frame</span></span>
+        </a>
+        <a class="nav-note nav-link-chip" href="https://github.com/suhanr/Image-AI-Label-Remover" target="_blank" rel="noreferrer"><span class="link-icon github-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 .7a11.3 11.3 0 0 0-3.57 22.02c.57.1.78-.25.78-.55v-2.02c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.54-.29-5.2-1.27-5.2-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.12 1.17a10.8 10.8 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.4-2.67 5.36-5.21 5.65.41.36.78 1.08.78 2.18v3.23c0 .3.2.65.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg></span><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="hero">
+        <div class="eyebrow"><span>01</span> IMAGE PRIVACY TOOL</div>
+        <h1>Image AI Label<br /><em>Remover.</em></h1>
+        <p class="intro">Clean embedded metadata without touching your pixels, then download a privacy-ready copy.</p>
+      </section>
+
+      <section class="workspace" aria-label="Image metadata cleaner">
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload an image">
+          <input id="file-input" type="file" accept="image/*" hidden />
+          <div class="upload-art" aria-hidden="true">
+            <span class="ring ring-one"></span><span class="ring ring-two"></span><span class="upload-icon">↑</span>
+          </div>
+          <h2>Drop an image here</h2>
+          <p>or <button id="browse-button" class="text-button" type="button">browse your files</button></p>
+          <div class="format-list"><span>ALL BROWSER-READABLE IMAGES</span><b>·</b><span>Max 50 MB</span></div>
+        </div>
+
+        <div id="processing" class="processing panel hidden" aria-live="polite">
+          <div class="loader"></div>
+          <div><strong>Cleaning your image</strong><p>Stripping metadata, preserving every pixel…</p></div>
+        </div>
+
+        <div id="result" class="result panel hidden">
+          <div class="result-heading">
+            <div><div class="eyebrow"><span>02</span> READY TO DOWNLOAD</div><h2>Your clean image is ready.</h2></div>
+            <button id="reset-button" class="icon-button" type="button" aria-label="Process another image">↻</button>
+          </div>
+          <div class="result-card">
+            <div class="preview-wrap"><img id="preview" alt="Processed image preview" /></div>
+            <div class="result-info">
+              <div class="file-name" id="file-name"></div>
+              <div class="meta-grid">
+                <div><span>FORMAT</span><strong id="file-type"></strong></div>
+                <div><span>SIZE</span><strong id="file-size"></strong></div>
+                <div><span>EXPORT STATUS</span><strong id="fingerprint"></strong></div>
+                <div><span>QUALITY</span><strong class="quality"><i></i> ORIGINAL</strong></div>
+              </div>
+              <button id="download-button" class="download-button" type="button"><span>Download clean image</span><b>↓</b></button>
+              <p class="privacy-note"><span>✦</span> Your image never leaves this device.</p>
+            </div>
+          </div>
+        </div>
+        <div id="error" class="error hidden" role="alert"></div>
+      </section>
+
+      <footer>
+        <span class="footer-credit">Built for creators who care about privacy.</span>
+        <span class="footer-links">
+          <a class="footer-link" href="https://www.facebook.com/suhan.alt" target="_blank" rel="noreferrer"><span class="footer-icon facebook-icon" aria-hidden="true">f</span><span>Suhan</span><span class="footer-arrow" aria-hidden="true">↗</span></a>
+          <a class="footer-link website-link" href="https://suhanurrahman.com/" target="_blank" rel="noreferrer"><span class="footer-icon website-icon" aria-hidden="true">✦</span><span>Dev's Portfolio</span><span class="footer-arrow" aria-hidden="true">↗</span></a>
+        </span>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
