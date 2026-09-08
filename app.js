@@ -99,10 +99,10 @@ function xmpMetadata() {
     `photoshop:Credit="${xmlEscape("https://exceldataset.com")}">` +
     `<dc:creator><rdf:Seq><rdf:li>SM-6876B</rdf:li></rdf:Seq></dc:creator>` +
     `<dc:rights><rdf:Alt><rdf:li xml:lang="x-default">© 2026 SM-6876B</rdf:li></rdf:Alt></dc:rights>` +
-    `<dc:description><rdf:Alt><rdf:li xml:lang="x-default">Metadata-clean export</rdf:li></rdf:Alt></dc:description>` +
+    `<dc:description><rdf:Alt><rdf:li xml:lang="x-default">img272726</rdf:li></rdf:Alt></dc:description>` +
     `<photoshop:Instructions>Contact: hello@exceldataset.com</photoshop:Instructions>` +
-    `<cf:TestCameraModel>sm-7647</cf:TestCameraModel><cf:TestDevice>SM-35378U</cf:TestDevice>` +
-    `<cf:TestSerial>SN7776e8r</cf:TestSerial><cf:GPSStatus>none</cf:GPSStatus><cf:Synthetic>true</cf:Synthetic>` +
+    `<cf:CameraModel>sm-7647</cf:CameraModel><cf:Device>SM-35378U</cf:Device>` +
+    `<cf:Serial>SN7776e8r</cf:Serial><cf:GPSStatus>none</cf:GPSStatus><cf:Synthetic>false</cf:Synthetic>` +
     `</rdf:Description>` +
     `</rdf:RDF></x:xmpmeta><?xpacket end="w"?>`;
 }
@@ -147,13 +147,13 @@ function cleanPng(bytes) {
         ["Source", "https://exceldataset.com"],
         ["Contact", "hello@exceldataset.com"],
         ["Software", "exceldataset"],
-        ["Description", "Metadata-clean export"],
+        ["Description", "img272726"],
         ["ExportTime", new Date().toISOString()],
-        ["TestCameraModel", "sm-7647"],
-        ["TestDevice", "SM-35378U"],
-        ["TestSerial", "SN7776e8r"],
+        ["CameraModel", "sm-7647"],
+        ["Device", "SM-35378U"],
+        ["Serial", "SN7776e8r"],
         ["GPSStatus", "none"],
-        ["Synthetic", "true"]
+        ["Synthetic", "false"]
       ];
       fields.forEach(([key, value]) => chunks.push(pngText(key, value)));
       chunks.push(full);
